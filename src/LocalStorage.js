@@ -17,7 +17,7 @@ import { providerArgsV3 } from "@data-provider/core";
 export class LocalStorage extends Storage {
   constructor(...args) {
     const [id, options, queryValue] = providerArgsV3(args);
-    super({ id, ...options, storageKey: "localStorage" }, queryValue);
+    super({ ...options, id, storageKey: "localStorage" }, queryValue);
   }
 
   get baseTags() {

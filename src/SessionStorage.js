@@ -17,7 +17,7 @@ import { providerArgsV3 } from "@data-provider/core";
 export class SessionStorage extends Storage {
   constructor(...args) {
     const [id, options, queryValue] = providerArgsV3(args);
-    super({ id, ...options, storageKey: "sessionStorage" }, queryValue);
+    super({ ...options, id, storageKey: "sessionStorage" }, queryValue);
   }
 
   get baseTags() {
